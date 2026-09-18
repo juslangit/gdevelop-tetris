@@ -1,0 +1,5 @@
+.env
+.DS_Store
+# HTML5 export - regenerate with GDevelop (File > Export) or the CLI below
+build/
+game.raw.json

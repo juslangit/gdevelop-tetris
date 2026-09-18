@@ -1,0 +1,3846 @@
+{
+  "firstLayout": "Game",
+  "gdVersion": {
+    "build": 282,
+    "major": 5,
+    "minor": 6,
+    "revision": 0
+  },
+  "properties": {
+    "adaptGameResolutionAtRuntime": true,
+    "antialiasingMode": "MSAA",
+    "antialisingEnabledOnMobile": false,
+    "folderProject": false,
+    "orientation": "default",
+    "packageName": "com.luqman.gdeveloptetris",
+    "pixelsRounding": false,
+    "projectUuid": "6aba70c3-ad6d-435d-88f2-b811022f0ca1",
+    "scaleMode": "linear",
+    "sizeOnStartupMode": "adaptWidth",
+    "templateSlug": "",
+    "version": "1.0.0",
+    "name": "Tetris (GDevelop test)",
+    "description": "",
+    "author": "",
+    "windowWidth": 720,
+    "windowHeight": 784,
+    "latestCompilationDirectory": "",
+    "maxFPS": 60,
+    "minFPS": 20,
+    "verticalSync": true,
+    "platformSpecificAssets": {},
+    "loadingScreen": {
+      "backgroundColor": 0,
+      "backgroundFadeInDuration": 0.2,
+      "backgroundImageResourceName": "",
+      "gdevelopLogoStyle": "light",
+      "logoAndProgressFadeInDuration": 0.2,
+      "logoAndProgressLogoFadeInDelay": 0.2,
+      "minDuration": 0,
+      "progressBarColor": 16777215,
+      "progressBarHeight": 20,
+      "progressBarMaxWidth": 200,
+      "progressBarMinWidth": 40,
+      "progressBarWidthPercent": 30,
+      "showGDevelopSplash": true,
+      "showProgressBar": true
+    },
+    "watermark": {
+      "placement": "bottom-left",
+      "showWatermark": true
+    },
+    "authorIds": [],
+    "authorUsernames": [],
+    "categories": [],
+    "playableDevices": [],
+    "extensionProperties": [],
+    "platforms": [
+      {
+        "name": "GDevelop JS platform"
+      }
+    ],
+    "currentPlatform": "GDevelop JS platform"
+  },
+  "resources": {
+    "resources": [
+      {
+        "file": "assets/block.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "block.png",
+        "smoothed": true,
+        "userAdded": true
+      },
+      {
+        "file": "assets/wall.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "wall.png",
+        "smoothed": true,
+        "userAdded": true
+      },
+      {
+        "file": "assets/cell.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "cell.png",
+        "smoothed": true,
+        "userAdded": true
+      },
+      {
+        "file": "assets/background.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "background.png",
+        "smoothed": true,
+        "userAdded": true
+      },
+      {
+        "file": "assets/panel.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "panel.png",
+        "smoothed": true,
+        "userAdded": true
+      }
+    ]
+  },
+  "objects": [],
+  "objectsFolderStructure": {
+    "folderName": "__ROOT"
+  },
+  "objectsGroups": [],
+  "variables": [
+    {
+      "name": "Best",
+      "type": "number",
+      "value": 0
+    }
+  ],
+  "layouts": [
+    {
+      "b": 80,
+      "disableInputWhenNotFocused": true,
+      "mangledName": "Game",
+      "name": "Game",
+      "r": 45,
+      "standardSortMethod": true,
+      "stopSoundsOnStartup": true,
+      "title": "",
+      "v": 30,
+      "uiSettings": {
+        "grid": true,
+        "gridType": "rectangular",
+        "gridWidth": 32,
+        "gridHeight": 32,
+        "gridOffsetX": 0,
+        "gridOffsetY": 0,
+        "gridColor": 10401023,
+        "gridAlpha": 0.3,
+        "snap": true,
+        "zoomFactor": 1,
+        "windowMask": false
+      },
+      "objectsGroups": [],
+      "variables": [
+        {
+          "name": "Shapes",
+          "type": "array",
+          "children": [
+            {
+              "type": "structure",
+              "children": [
+                {
+                  "name": "Color",
+                  "type": "string",
+                  "value": "0;220;240"
+                },
+                {
+                  "name": "Name",
+                  "type": "string",
+                  "value": "I"
+                },
+                {
+                  "name": "PX",
+                  "type": "number",
+                  "value": 2
+                },
+                {
+                  "name": "PY",
+                  "type": "number",
+                  "value": 2
+                },
+                {
+                  "name": "X",
+                  "type": "array",
+                  "children": [
+                    {
+                      "type": "number",
+                      "value": 0
+                    },
+                    {
+                      "type": "number",
+                      "value": 1
+                    },
+                    {
+                      "type": "number",
+                      "value": 2
+                    },
+                    {
+                      "type": "number",
+                      "value": 3
+                    }
+                  ]
+                },
+                {
+                  "name": "Y",
+                  "type": "array",
+                  "children": [
+                    {
+                      "type": "number",
+                      "value": 1
+                    },
+                    {
+                      "type": "number",
+                      "value": 1
+                    },
+                    {
+                      "type": "number",
+                      "value": 1
+                    },
+                    {
+                      "type": "number",
+                      "value": 1
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "structure",
+              "children": [
+                {
+                  "name": "Color",
+                  "type": "string",
+                  "value": "250;215;0"
+                },
+                {
+                  "name": "Name",
+                  "type": "string",
+                  "value": "O"
+                },
+                {
+                  "name": "PX",
+                  "type": "number",
+                  "value": 2
+                },
+                {
+                  "name": "PY",
+                  "type": "number",
+                  "value": 1
+                },
+                {
+                  "name": "X",
+                  "type": "array",
+                  "children": [
+                    {
+                      "type": "number",
+                      "value": 1
+                    },
+                    {
+                      "type": "number",
+                      "value": 2
+                    },
+                    {
+                      "type": "number",
+                      "value": 1
+                    },
+                    {
+                      "type": "number",
+                      "value": 2
+                    }
+                  ]
+                },
+                {
+                  "name": "Y",
+                  "type": "array",
+                  "children": [
+                    {
+                      "type": "number",
+                      "value": 0
+                    },
+                    {
+                      "type": "number",
+                      "value": 0
+                    },
+                    {
+                      "type": "number",
+                      "value": 1
+                    },
+                    {
+                      "type": "number",
+                      "value": 1
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "structure",
+              "children": [
+                {
+                  "name": "Color",
+                  "type": "string",
+                  "value": "170;60;230"
+                },
+                {
+                  "name": "Name",
+                  "type": "string",
+                  "value": "T"
+                },
+                {
+                  "name": "PX",
+                  "type": "number",
+                  "value": 1.5
+                },
+                {
+                  "name": "PY",
+                  "type": "number",
+                  "value": 1.5
+                },
+                {
+                  "name": "X",
+                  "type": "array",
+                  "children": [
+                    {
+                      "type": "number",
+                      "value": 1
+                    },
+                    {
+                      "type": "number",
+                      "value": 0
+                    },
+                    {
+                      "type": "number",
+                      "value": 1
+                    },
+                    {
+                      "type": "number",
+                      "value": 2
+                    }
+                  ]
+                },
+                {
+                  "name": "Y",
+                  "type": "array",
+                  "children": [
+                    {
+                      "type": "number",
+                      "value": 0
+                    },
+                    {
+                      "type": "number",
+                      "value": 1
+                    },
+                    {
+                      "type": "number",
+                      "value": 1
+                    },
+                    {
+                      "type": "number",
+                      "value": 1
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "structure",
+              "children": [
+                {
+                  "name": "Color",
+                  "type": "string",
+                  "value": "60;210;80"
+                },
+                {
+                  "name": "Name",
+                  "type": "string",
+                  "value": "S"
+                },
+                {
+                  "name": "PX",
+                  "type": "number",
+                  "value": 1.5
+                },
+                {
+                  "name": "PY",
+                  "type": "number",
+                  "value": 1.5
+                },
+                {
+                  "name": "X",
+                  "type": "array",
+                  "children": [
+                    {
+                      "type": "number",
+                      "value": 1
+                    },
+                    {
+                      "type": "number",
+                      "value": 2
+                    },
+                    {
+                      "type": "number",
+                      "value": 0
+                    },
+                    {
+                      "type": "number",
+                      "value": 1
+                    }
+                  ]
+                },
+                {
+                  "name": "Y",
+                  "type": "array",
+                  "children": [
+                    {
+                      "type": "number",
+                      "value": 0
+                    },
+                    {
+                      "type": "number",
+                      "value": 0
+                    },
+                    {
+                      "type": "number",
+                      "value": 1
+                    },
+                    {
+                      "type": "number",
+                      "value": 1
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "structure",
+              "children": [
+                {
+                  "name": "Color",
+                  "type": "string",
+                  "value": "240;60;60"
+                },
+                {
+                  "name": "Name",
+                  "type": "string",
+                  "value": "Z"
+                },
+                {
+                  "name": "PX",
+                  "type": "number",
+                  "value": 1.5
+                },
+                {
+                  "name": "PY",
+                  "type": "number",
+                  "value": 1.5
+                },
+                {
+                  "name": "X",
+                  "type": "array",
+                  "children": [
+                    {
+                      "type": "number",
+                      "value": 0
+                    },
+                    {
+                      "type": "number",
+                      "value": 1
+                    },
+                    {
+                      "type": "number",
+                      "value": 1
+                    },
+                    {
+                      "type": "number",
+                      "value": 2
+                    }
+                  ]
+                },
+                {
+                  "name": "Y",
+                  "type": "array",
+                  "children": [
+                    {
+                      "type": "number",
+                      "value": 0
+                    },
+                    {
+                      "type": "number",
+                      "value": 0
+                    },
+                    {
+                      "type": "number",
+                      "value": 1
+                    },
+                    {
+                      "type": "number",
+                      "value": 1
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "structure",
+              "children": [
+                {
+                  "name": "Color",
+                  "type": "string",
+                  "value": "50;100;240"
+                },
+                {
+                  "name": "Name",
+                  "type": "string",
+                  "value": "J"
+                },
+                {
+                  "name": "PX",
+                  "type": "number",
+                  "value": 1.5
+                },
+                {
+                  "name": "PY",
+                  "type": "number",
+                  "value": 1.5
+                },
+                {
+                  "name": "X",
+                  "type": "array",
+                  "children": [
+                    {
+                      "type": "number",
+                      "value": 0
+                    },
+                    {
+                      "type": "number",
+                      "value": 0
+                    },
+                    {
+                      "type": "number",
+                      "value": 1
+                    },
+                    {
+                      "type": "number",
+                      "value": 2
+                    }
+                  ]
+                },
+                {
+                  "name": "Y",
+                  "type": "array",
+                  "children": [
+                    {
+                      "type": "number",
+                      "value": 0
+                    },
+                    {
+                      "type": "number",
+                      "value": 1
+                    },
+                    {
+                      "type": "number",
+                      "value": 1
+                    },
+                    {
+                      "type": "number",
+                      "value": 1
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "structure",
+              "children": [
+                {
+                  "name": "Color",
+                  "type": "string",
+                  "value": "250;150;30"
+                },
+                {
+                  "name": "Name",
+                  "type": "string",
+                  "value": "L"
+                },
+                {
+                  "name": "PX",
+                  "type": "number",
+                  "value": 1.5
+                },
+                {
+                  "name": "PY",
+                  "type": "number",
+                  "value": 1.5
+                },
+                {
+                  "name": "X",
+                  "type": "array",
+                  "children": [
+                    {
+                      "type": "number",
+                      "value": 2
+                    },
+                    {
+                      "type": "number",
+                      "value": 0
+                    },
+                    {
+                      "type": "number",
+                      "value": 1
+                    },
+                    {
+                      "type": "number",
+                      "value": 2
+                    }
+                  ]
+                },
+                {
+                  "name": "Y",
+                  "type": "array",
+                  "children": [
+                    {
+                      "type": "number",
+                      "value": 0
+                    },
+                    {
+                      "type": "number",
+                      "value": 1
+                    },
+                    {
+                      "type": "number",
+                      "value": 1
+                    },
+                    {
+                      "type": "number",
+                      "value": 1
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Kicks",
+          "type": "array",
+          "children": [
+            {
+              "type": "number",
+              "value": 0
+            },
+            {
+              "type": "number",
+              "value": 32
+            },
+            {
+              "type": "number",
+              "value": -32
+            }
+          ]
+        },
+        {
+          "name": "LineScores",
+          "type": "array",
+          "children": [
+            {
+              "type": "number",
+              "value": 0
+            },
+            {
+              "type": "number",
+              "value": 100
+            },
+            {
+              "type": "number",
+              "value": 300
+            },
+            {
+              "type": "number",
+              "value": 500
+            },
+            {
+              "type": "number",
+              "value": 800
+            }
+          ]
+        },
+        {
+          "name": "BoardX",
+          "type": "number",
+          "value": 64
+        },
+        {
+          "name": "BoardY",
+          "type": "number",
+          "value": 48
+        },
+        {
+          "name": "SpawnX",
+          "type": "number",
+          "value": 160
+        },
+        {
+          "name": "SpawnY",
+          "type": "number",
+          "value": 48
+        },
+        {
+          "name": "PreviewX",
+          "type": "number",
+          "value": 464
+        },
+        {
+          "name": "PreviewY",
+          "type": "number",
+          "value": 176
+        },
+        {
+          "name": "PieceType",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "NextType",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "PivotX",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "PivotY",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "OldPivotX",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "OldPivotY",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "MoveX",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "MoveY",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "Rot",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "Steps",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "Try",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "Tries",
+          "type": "number",
+          "value": 1
+        },
+        {
+          "name": "Checking",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "Blocked",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "Done",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "Landed",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "SpawnNeeded",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "RowY",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "Cleared",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "LinesNow",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "Score",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "Lines",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "Level",
+          "type": "number",
+          "value": 1
+        },
+        {
+          "name": "FallDelay",
+          "type": "number",
+          "value": 0.8
+        },
+        {
+          "name": "ShiftWait",
+          "type": "number",
+          "value": 0.17
+        },
+        {
+          "name": "I",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "State",
+          "type": "string",
+          "value": "Playing"
+        }
+      ],
+      "instances": [
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 784,
+          "layer": "",
+          "name": "Background",
+          "persistentUuid": "590898a7-4c04-4010-9dfd-f1f6e21eb598",
+          "width": 720,
+          "x": 0,
+          "y": 0,
+          "zOrder": -10,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 640,
+          "layer": "",
+          "name": "BoardBg",
+          "persistentUuid": "1d5ae7b1-dfb9-43ce-bb1c-b49862d939a1",
+          "width": 320,
+          "x": 64,
+          "y": 48,
+          "zOrder": -5,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 640,
+          "layer": "",
+          "name": "Wall",
+          "persistentUuid": "979c70ba-b1eb-4a32-a2dc-e067dce8c847",
+          "width": 32,
+          "x": 32,
+          "y": 48,
+          "zOrder": 0,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 640,
+          "layer": "",
+          "name": "Wall",
+          "persistentUuid": "fdb7151a-3f98-4567-a53e-be26756bca22",
+          "width": 32,
+          "x": 384,
+          "y": 48,
+          "zOrder": 0,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 32,
+          "layer": "",
+          "name": "Wall",
+          "persistentUuid": "84eac8f5-6892-48ae-b9ed-ea26b44397b4",
+          "width": 384,
+          "x": 32,
+          "y": 688,
+          "zOrder": 0,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "UI",
+          "name": "Title",
+          "persistentUuid": "a21437d7-309f-4fe5-8869-f2f85243bc99",
+          "width": 0,
+          "x": 448,
+          "y": 40,
+          "zOrder": 5,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "UI",
+          "name": "NextLabel",
+          "persistentUuid": "672ed9e2-59c7-4df7-9000-58188cc13011",
+          "width": 0,
+          "x": 448,
+          "y": 128,
+          "zOrder": 5,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "UI",
+          "name": "ScoreText",
+          "persistentUuid": "0e7c0900-42d7-4b9c-ba8d-1dee7969f21e",
+          "width": 0,
+          "x": 448,
+          "y": 270,
+          "zOrder": 5,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "UI",
+          "name": "LinesText",
+          "persistentUuid": "5983dbf2-5e63-423c-bc83-8b9db5afb7fb",
+          "width": 0,
+          "x": 448,
+          "y": 350,
+          "zOrder": 5,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "UI",
+          "name": "LevelText",
+          "persistentUuid": "0118afa8-28e8-4f4d-bfff-64b0e1a6b425",
+          "width": 0,
+          "x": 448,
+          "y": 430,
+          "zOrder": 5,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "UI",
+          "name": "BestText",
+          "persistentUuid": "45352b92-336a-46b5-8785-c05c953413f6",
+          "width": 0,
+          "x": 448,
+          "y": 510,
+          "zOrder": 5,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "UI",
+          "name": "HelpText",
+          "persistentUuid": "cc57fc90-55d6-49a3-9504-c1d5ee150da7",
+          "width": 0,
+          "x": 448,
+          "y": 600,
+          "zOrder": 5,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 192,
+          "layer": "UI",
+          "name": "GameOverPanel",
+          "persistentUuid": "effaf89e-e236-4ebd-b912-43fc2e3353de",
+          "width": 320,
+          "x": 64,
+          "y": 288,
+          "zOrder": 0,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 150,
+          "layer": "UI",
+          "name": "GameOverText",
+          "persistentUuid": "952fb5c9-66ff-4b7b-9f6c-9e51facc4a29",
+          "width": 320,
+          "x": 64,
+          "y": 328,
+          "zOrder": 1,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        }
+      ],
+      "objects": [
+        {
+          "assetStoreId": "",
+          "height": 480,
+          "name": "Background",
+          "texture": "background.png",
+          "type": "TiledSpriteObject::TiledSprite",
+          "width": 640,
+          "variables": [],
+          "effects": [],
+          "behaviors": []
+        },
+        {
+          "assetStoreId": "",
+          "height": 32,
+          "name": "BoardBg",
+          "texture": "cell.png",
+          "type": "TiledSpriteObject::TiledSprite",
+          "width": 32,
+          "variables": [],
+          "effects": [],
+          "behaviors": []
+        },
+        {
+          "assetStoreId": "",
+          "height": 32,
+          "name": "Wall",
+          "texture": "wall.png",
+          "type": "TiledSpriteObject::TiledSprite",
+          "width": 32,
+          "variables": [],
+          "effects": [],
+          "behaviors": []
+        },
+        {
+          "assetStoreId": "",
+          "height": 32,
+          "name": "GameOverPanel",
+          "texture": "panel.png",
+          "type": "TiledSpriteObject::TiledSprite",
+          "width": 32,
+          "variables": [],
+          "effects": [],
+          "behaviors": []
+        },
+        {
+          "adaptCollisionMaskAutomatically": false,
+          "assetStoreId": "",
+          "name": "Active",
+          "type": "Sprite",
+          "updateIfNotVisible": false,
+          "variables": [
+            {
+              "name": "OldX",
+              "type": "number",
+              "value": 0
+            },
+            {
+              "name": "OldY",
+              "type": "number",
+              "value": 0
+            },
+            {
+              "name": "DX",
+              "type": "number",
+              "value": 0
+            },
+            {
+              "name": "DY",
+              "type": "number",
+              "value": 0
+            }
+          ],
+          "effects": [],
+          "behaviors": [],
+          "animations": [
+            {
+              "name": "",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": false,
+                  "timeBetweenFrames": 0.1,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "block.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 4,
+                            "y": 4
+                          },
+                          {
+                            "x": 28,
+                            "y": 4
+                          },
+                          {
+                            "x": 28,
+                            "y": 28
+                          },
+                          {
+                            "x": 4,
+                            "y": 28
+                          }
+                        ]
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "adaptCollisionMaskAutomatically": false,
+          "assetStoreId": "",
+          "name": "Settled",
+          "type": "Sprite",
+          "updateIfNotVisible": false,
+          "variables": [],
+          "effects": [],
+          "behaviors": [],
+          "animations": [
+            {
+              "name": "",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": false,
+                  "timeBetweenFrames": 0.1,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "block.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 4,
+                            "y": 4
+                          },
+                          {
+                            "x": 28,
+                            "y": 4
+                          },
+                          {
+                            "x": 28,
+                            "y": 28
+                          },
+                          {
+                            "x": 4,
+                            "y": 28
+                          }
+                        ]
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "adaptCollisionMaskAutomatically": false,
+          "assetStoreId": "",
+          "name": "NextBlock",
+          "type": "Sprite",
+          "updateIfNotVisible": false,
+          "variables": [],
+          "effects": [],
+          "behaviors": [],
+          "animations": [
+            {
+              "name": "",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": false,
+                  "timeBetweenFrames": 0.1,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "block.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 4,
+                            "y": 4
+                          },
+                          {
+                            "x": 28,
+                            "y": 4
+                          },
+                          {
+                            "x": 28,
+                            "y": 28
+                          },
+                          {
+                            "x": 4,
+                            "y": 28
+                          }
+                        ]
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "assetStoreId": "",
+          "bold": true,
+          "italic": false,
+          "name": "Title",
+          "smoothed": true,
+          "type": "TextObject::Text",
+          "underlined": false,
+          "variables": [],
+          "effects": [],
+          "behaviors": [],
+          "string": "TETRIS",
+          "font": "",
+          "textAlignment": "left",
+          "characterSize": 52,
+          "color": {
+            "b": 0,
+            "g": 215,
+            "r": 255
+          },
+          "content": {
+            "bold": true,
+            "isOutlineEnabled": true,
+            "isShadowEnabled": false,
+            "italic": false,
+            "outlineColor": "20;16;40",
+            "outlineThickness": 4,
+            "shadowAngle": 90,
+            "shadowBlurRadius": 2,
+            "shadowColor": "0;0;0",
+            "shadowDistance": 4,
+            "shadowOpacity": 127,
+            "smoothed": true,
+            "underlined": false,
+            "text": "TETRIS",
+            "font": "",
+            "textAlignment": "left",
+            "verticalTextAlignment": "top",
+            "characterSize": 52,
+            "lineHeight": 0,
+            "color": "255;215;0"
+          }
+        },
+        {
+          "assetStoreId": "",
+          "bold": true,
+          "italic": false,
+          "name": "NextLabel",
+          "smoothed": true,
+          "type": "TextObject::Text",
+          "underlined": false,
+          "variables": [],
+          "effects": [],
+          "behaviors": [],
+          "string": "NEXT",
+          "font": "",
+          "textAlignment": "left",
+          "characterSize": 28,
+          "color": {
+            "b": 255,
+            "g": 255,
+            "r": 255
+          },
+          "content": {
+            "bold": true,
+            "isOutlineEnabled": true,
+            "isShadowEnabled": false,
+            "italic": false,
+            "outlineColor": "20;16;40",
+            "outlineThickness": 4,
+            "shadowAngle": 90,
+            "shadowBlurRadius": 2,
+            "shadowColor": "0;0;0",
+            "shadowDistance": 4,
+            "shadowOpacity": 127,
+            "smoothed": true,
+            "underlined": false,
+            "text": "NEXT",
+            "font": "",
+            "textAlignment": "left",
+            "verticalTextAlignment": "top",
+            "characterSize": 28,
+            "lineHeight": 0,
+            "color": "255;255;255"
+          }
+        },
+        {
+          "assetStoreId": "",
+          "bold": true,
+          "italic": false,
+          "name": "ScoreText",
+          "smoothed": true,
+          "type": "TextObject::Text",
+          "underlined": false,
+          "variables": [],
+          "effects": [],
+          "behaviors": [],
+          "string": "SCORE\n0",
+          "font": "",
+          "textAlignment": "left",
+          "characterSize": 28,
+          "color": {
+            "b": 255,
+            "g": 255,
+            "r": 255
+          },
+          "content": {
+            "bold": true,
+            "isOutlineEnabled": true,
+            "isShadowEnabled": false,
+            "italic": false,
+            "outlineColor": "20;16;40",
+            "outlineThickness": 4,
+            "shadowAngle": 90,
+            "shadowBlurRadius": 2,
+            "shadowColor": "0;0;0",
+            "shadowDistance": 4,
+            "shadowOpacity": 127,
+            "smoothed": true,
+            "underlined": false,
+            "text": "SCORE\n0",
+            "font": "",
+            "textAlignment": "left",
+            "verticalTextAlignment": "top",
+            "characterSize": 28,
+            "lineHeight": 0,
+            "color": "255;255;255"
+          }
+        },
+        {
+          "assetStoreId": "",
+          "bold": true,
+          "italic": false,
+          "name": "LinesText",
+          "smoothed": true,
+          "type": "TextObject::Text",
+          "underlined": false,
+          "variables": [],
+          "effects": [],
+          "behaviors": [],
+          "string": "LINES\n0",
+          "font": "",
+          "textAlignment": "left",
+          "characterSize": 28,
+          "color": {
+            "b": 255,
+            "g": 255,
+            "r": 255
+          },
+          "content": {
+            "bold": true,
+            "isOutlineEnabled": true,
+            "isShadowEnabled": false,
+            "italic": false,
+            "outlineColor": "20;16;40",
+            "outlineThickness": 4,
+            "shadowAngle": 90,
+            "shadowBlurRadius": 2,
+            "shadowColor": "0;0;0",
+            "shadowDistance": 4,
+            "shadowOpacity": 127,
+            "smoothed": true,
+            "underlined": false,
+            "text": "LINES\n0",
+            "font": "",
+            "textAlignment": "left",
+            "verticalTextAlignment": "top",
+            "characterSize": 28,
+            "lineHeight": 0,
+            "color": "255;255;255"
+          }
+        },
+        {
+          "assetStoreId": "",
+          "bold": true,
+          "italic": false,
+          "name": "LevelText",
+          "smoothed": true,
+          "type": "TextObject::Text",
+          "underlined": false,
+          "variables": [],
+          "effects": [],
+          "behaviors": [],
+          "string": "LEVEL\n1",
+          "font": "",
+          "textAlignment": "left",
+          "characterSize": 28,
+          "color": {
+            "b": 255,
+            "g": 255,
+            "r": 255
+          },
+          "content": {
+            "bold": true,
+            "isOutlineEnabled": true,
+            "isShadowEnabled": false,
+            "italic": false,
+            "outlineColor": "20;16;40",
+            "outlineThickness": 4,
+            "shadowAngle": 90,
+            "shadowBlurRadius": 2,
+            "shadowColor": "0;0;0",
+            "shadowDistance": 4,
+            "shadowOpacity": 127,
+            "smoothed": true,
+            "underlined": false,
+            "text": "LEVEL\n1",
+            "font": "",
+            "textAlignment": "left",
+            "verticalTextAlignment": "top",
+            "characterSize": 28,
+            "lineHeight": 0,
+            "color": "255;255;255"
+          }
+        },
+        {
+          "assetStoreId": "",
+          "bold": true,
+          "italic": false,
+          "name": "BestText",
+          "smoothed": true,
+          "type": "TextObject::Text",
+          "underlined": false,
+          "variables": [],
+          "effects": [],
+          "behaviors": [],
+          "string": "BEST\n0",
+          "font": "",
+          "textAlignment": "left",
+          "characterSize": 28,
+          "color": {
+            "b": 255,
+            "g": 255,
+            "r": 255
+          },
+          "content": {
+            "bold": true,
+            "isOutlineEnabled": true,
+            "isShadowEnabled": false,
+            "italic": false,
+            "outlineColor": "20;16;40",
+            "outlineThickness": 4,
+            "shadowAngle": 90,
+            "shadowBlurRadius": 2,
+            "shadowColor": "0;0;0",
+            "shadowDistance": 4,
+            "shadowOpacity": 127,
+            "smoothed": true,
+            "underlined": false,
+            "text": "BEST\n0",
+            "font": "",
+            "textAlignment": "left",
+            "verticalTextAlignment": "top",
+            "characterSize": 28,
+            "lineHeight": 0,
+            "color": "255;255;255"
+          }
+        },
+        {
+          "assetStoreId": "",
+          "bold": true,
+          "italic": false,
+          "name": "HelpText",
+          "smoothed": true,
+          "type": "TextObject::Text",
+          "underlined": false,
+          "variables": [],
+          "effects": [],
+          "behaviors": [],
+          "string": "Left / Right  move\nUp or X  turn\nDown  soft drop\nSpace  hard drop",
+          "font": "",
+          "textAlignment": "left",
+          "characterSize": 18,
+          "color": {
+            "b": 255,
+            "g": 220,
+            "r": 225
+          },
+          "content": {
+            "bold": true,
+            "isOutlineEnabled": true,
+            "isShadowEnabled": false,
+            "italic": false,
+            "outlineColor": "20;16;40",
+            "outlineThickness": 4,
+            "shadowAngle": 90,
+            "shadowBlurRadius": 2,
+            "shadowColor": "0;0;0",
+            "shadowDistance": 4,
+            "shadowOpacity": 127,
+            "smoothed": true,
+            "underlined": false,
+            "text": "Left / Right  move\nUp or X  turn\nDown  soft drop\nSpace  hard drop",
+            "font": "",
+            "textAlignment": "left",
+            "verticalTextAlignment": "top",
+            "characterSize": 18,
+            "lineHeight": 0,
+            "color": "225;220;255"
+          }
+        },
+        {
+          "assetStoreId": "",
+          "bold": true,
+          "italic": false,
+          "name": "GameOverText",
+          "smoothed": true,
+          "type": "TextObject::Text",
+          "underlined": false,
+          "variables": [],
+          "effects": [],
+          "behaviors": [],
+          "string": "GAME OVER\n\nEnter to play again",
+          "font": "",
+          "textAlignment": "center",
+          "characterSize": 34,
+          "color": {
+            "b": 255,
+            "g": 255,
+            "r": 255
+          },
+          "content": {
+            "bold": true,
+            "isOutlineEnabled": true,
+            "isShadowEnabled": false,
+            "italic": false,
+            "outlineColor": "20;16;40",
+            "outlineThickness": 4,
+            "shadowAngle": 90,
+            "shadowBlurRadius": 2,
+            "shadowColor": "0;0;0",
+            "shadowDistance": 4,
+            "shadowOpacity": 127,
+            "smoothed": true,
+            "underlined": false,
+            "text": "GAME OVER\n\nEnter to play again",
+            "font": "",
+            "textAlignment": "center",
+            "verticalTextAlignment": "top",
+            "characterSize": 34,
+            "lineHeight": 0,
+            "color": "255;255;255"
+          }
+        }
+      ],
+      "objectsFolderStructure": {
+        "folderName": "__ROOT",
+        "children": [
+          {
+            "objectName": "Background"
+          },
+          {
+            "objectName": "BoardBg"
+          },
+          {
+            "objectName": "Wall"
+          },
+          {
+            "objectName": "GameOverPanel"
+          },
+          {
+            "objectName": "Active"
+          },
+          {
+            "objectName": "Settled"
+          },
+          {
+            "objectName": "NextBlock"
+          },
+          {
+            "objectName": "Title"
+          },
+          {
+            "objectName": "NextLabel"
+          },
+          {
+            "objectName": "ScoreText"
+          },
+          {
+            "objectName": "LinesText"
+          },
+          {
+            "objectName": "LevelText"
+          },
+          {
+            "objectName": "BestText"
+          },
+          {
+            "objectName": "HelpText"
+          },
+          {
+            "objectName": "GameOverText"
+          }
+        ]
+      },
+      "events": [
+        {
+          "type": "BuiltinCommonInstructions::Comment",
+          "color": {
+            "b": 109,
+            "g": 230,
+            "r": 255,
+            "textB": 0,
+            "textG": 0,
+            "textR": 0
+          },
+          "comment": "A simple Tetris. Every piece is 4 'Active' blocks. When a piece lands, each block is swapped for a 'Settled' block, full rows are removed, and a new piece appears. Piece shapes and colours live in the scene variable 'Shapes'."
+        },
+        {
+          "colorB": 228,
+          "colorG": 176,
+          "colorR": 74,
+          "creationTime": 0,
+          "name": "Start",
+          "source": "",
+          "type": "BuiltinCommonInstructions::Group",
+          "events": [
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "SceneJustBegins"
+                  },
+                  "parameters": [
+                    ""
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "Hide"
+                  },
+                  "parameters": [
+                    "GameOverText"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "Hide"
+                  },
+                  "parameters": [
+                    "GameOverPanel"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "SetNumberVariable"
+                  },
+                  "parameters": [
+                    "NextType",
+                    "=",
+                    "RandomInRange(0, 6)"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "SetNumberVariable"
+                  },
+                  "parameters": [
+                    "SpawnNeeded",
+                    "=",
+                    "1"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "SetStringVariable"
+                  },
+                  "parameters": [
+                    "State",
+                    "=",
+                    "\"Playing\""
+                  ]
+                }
+              ]
+            }
+          ],
+          "parameters": []
+        },
+        {
+          "colorB": 228,
+          "colorG": 176,
+          "colorR": 74,
+          "creationTime": 0,
+          "name": "Spawn the next piece",
+          "source": "",
+          "type": "BuiltinCommonInstructions::Group",
+          "events": [
+            {
+              "type": "BuiltinCommonInstructions::Comment",
+              "color": {
+                "b": 109,
+                "g": 230,
+                "r": 255,
+                "textB": 0,
+                "textG": 0,
+                "textR": 0
+              },
+              "comment": "Take the piece shown under NEXT, pick a new NEXT, and build both from the 'Shapes' table."
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "NumberVariable"
+                  },
+                  "parameters": [
+                    "SpawnNeeded",
+                    "=",
+                    "1"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "StringVariable"
+                  },
+                  "parameters": [
+                    "State",
+                    "=",
+                    "\"Playing\""
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "SetNumberVariable"
+                  },
+                  "parameters": [
+                    "SpawnNeeded",
+                    "=",
+                    "0"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "SetNumberVariable"
+                  },
+                  "parameters": [
+                    "PieceType",
+                    "=",
+                    "NextType"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "SetNumberVariable"
+                  },
+                  "parameters": [
+                    "NextType",
+                    "=",
+                    "RandomInRange(0, 6)"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "SetNumberVariable"
+                  },
+                  "parameters": [
+                    "PivotX",
+                    "=",
+                    "SpawnX + Shapes[PieceType].PX * 32"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "SetNumberVariable"
+                  },
+                  "parameters": [
+                    "PivotY",
+                    "=",
+                    "SpawnY + Shapes[PieceType].PY * 32"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "SetNumberVariable"
+                  },
+                  "parameters": [
+                    "I",
+                    "=",
+                    "0"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "Delete"
+                  },
+                  "parameters": [
+                    "NextBlock",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "ResetTimer"
+                  },
+                  "parameters": [
+                    "",
+                    "\"Fall\""
+                  ]
+                }
+              ],
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::Repeat",
+                  "repeatExpression": "4",
+                  "conditions": [],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "Create"
+                      },
+                      "parameters": [
+                        "",
+                        "Active",
+                        "SpawnX + Shapes[PieceType].X[I] * 32",
+                        "SpawnY + Shapes[PieceType].Y[I] * 32",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "ChangeColor"
+                      },
+                      "parameters": [
+                        "Active",
+                        "Shapes[PieceType].Color"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "Create"
+                      },
+                      "parameters": [
+                        "",
+                        "NextBlock",
+                        "PreviewX + Shapes[NextType].X[I] * 32",
+                        "PreviewY + Shapes[NextType].Y[I] * 32",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "ChangeColor"
+                      },
+                      "parameters": [
+                        "NextBlock",
+                        "Shapes[NextType].Color"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetNumberVariable"
+                      },
+                      "parameters": [
+                        "I",
+                        "+",
+                        "1"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Comment",
+                  "color": {
+                    "b": 109,
+                    "g": 230,
+                    "r": 255,
+                    "textB": 0,
+                    "textG": 0,
+                    "textR": 0
+                  },
+                  "comment": "No room for the new piece: the stack reached the top."
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "CollisionNP"
+                      },
+                      "parameters": [
+                        "Active",
+                        "Settled",
+                        "",
+                        "",
+                        ""
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "SetStringVariable"
+                      },
+                      "parameters": [
+                        "State",
+                        "=",
+                        "\"GameOver\""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "Show"
+                      },
+                      "parameters": [
+                        "GameOverText",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "Show"
+                      },
+                      "parameters": [
+                        "GameOverPanel",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetNumberVariable"
+                      },
+                      "parameters": [
+                        "Best",
+                        "=",
+                        "max(Best, Score)"
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "parameters": []
+        },
+        {
+          "colorB": 228,
+          "colorG": 176,
+          "colorR": 74,
+          "creationTime": 0,
+          "name": "Read the keyboard",
+          "source": "",
+          "type": "BuiltinCommonInstructions::Group",
+          "events": [
+            {
+              "type": "BuiltinCommonInstructions::Comment",
+              "color": {
+                "b": 109,
+                "g": 230,
+                "r": 255,
+                "textB": 0,
+                "textG": 0,
+                "textR": 0
+              },
+              "comment": "Turn key presses into a move request: MoveX (left/right), MoveY (down), Rot (turn) and Steps (how many times to try it - 22 for a hard drop)."
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "StringVariable"
+                  },
+                  "parameters": [
+                    "State",
+                    "=",
+                    "\"Playing\""
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "SetNumberVariable"
+                  },
+                  "parameters": [
+                    "MoveX",
+                    "=",
+                    "0"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "SetNumberVariable"
+                  },
+                  "parameters": [
+                    "MoveY",
+                    "=",
+                    "0"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "SetNumberVariable"
+                  },
+                  "parameters": [
+                    "Rot",
+                    "=",
+                    "0"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "SetNumberVariable"
+                  },
+                  "parameters": [
+                    "Steps",
+                    "=",
+                    "0"
+                  ]
+                }
+              ],
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::Comment",
+                  "color": {
+                    "b": 109,
+                    "g": 230,
+                    "r": 255,
+                    "textB": 0,
+                    "textG": 0,
+                    "textR": 0
+                  },
+                  "comment": "Holding left or right repeats the move after a short wait."
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "KeyFromTextPressed"
+                      },
+                      "parameters": [
+                        "",
+                        "\"Left\""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "CompareTimer"
+                      },
+                      "parameters": [
+                        "",
+                        "\"Shift\"",
+                        ">",
+                        "ShiftWait"
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "SetNumberVariable"
+                      },
+                      "parameters": [
+                        "MoveX",
+                        "=",
+                        "-1"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetNumberVariable"
+                      },
+                      "parameters": [
+                        "Steps",
+                        "=",
+                        "1"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "ResetTimer"
+                      },
+                      "parameters": [
+                        "",
+                        "\"Shift\""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetNumberVariable"
+                      },
+                      "parameters": [
+                        "ShiftWait",
+                        "=",
+                        "0.05"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "KeyFromTextJustPressed"
+                      },
+                      "parameters": [
+                        "",
+                        "\"Left\""
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "SetNumberVariable"
+                      },
+                      "parameters": [
+                        "MoveX",
+                        "=",
+                        "-1"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetNumberVariable"
+                      },
+                      "parameters": [
+                        "Steps",
+                        "=",
+                        "1"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "ResetTimer"
+                      },
+                      "parameters": [
+                        "",
+                        "\"Shift\""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetNumberVariable"
+                      },
+                      "parameters": [
+                        "ShiftWait",
+                        "=",
+                        "0.17"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "KeyFromTextPressed"
+                      },
+                      "parameters": [
+                        "",
+                        "\"Right\""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "CompareTimer"
+                      },
+                      "parameters": [
+                        "",
+                        "\"Shift\"",
+                        ">",
+                        "ShiftWait"
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "SetNumberVariable"
+                      },
+                      "parameters": [
+                        "MoveX",
+                        "=",
+                        "1"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetNumberVariable"
+                      },
+                      "parameters": [
+                        "Steps",
+                        "=",
+                        "1"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "ResetTimer"
+                      },
+                      "parameters": [
+                        "",
+                        "\"Shift\""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetNumberVariable"
+                      },
+                      "parameters": [
+                        "ShiftWait",
+                        "=",
+                        "0.05"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "KeyFromTextJustPressed"
+                      },
+                      "parameters": [
+                        "",
+                        "\"Right\""
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "SetNumberVariable"
+                      },
+                      "parameters": [
+                        "MoveX",
+                        "=",
+                        "1"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetNumberVariable"
+                      },
+                      "parameters": [
+                        "Steps",
+                        "=",
+                        "1"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "ResetTimer"
+                      },
+                      "parameters": [
+                        "",
+                        "\"Shift\""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetNumberVariable"
+                      },
+                      "parameters": [
+                        "ShiftWait",
+                        "=",
+                        "0.17"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "KeyFromTextJustPressed"
+                      },
+                      "parameters": [
+                        "",
+                        "\"Up\""
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "SetNumberVariable"
+                      },
+                      "parameters": [
+                        "Rot",
+                        "=",
+                        "1"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetNumberVariable"
+                      },
+                      "parameters": [
+                        "Steps",
+                        "=",
+                        "1"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "KeyFromTextJustPressed"
+                      },
+                      "parameters": [
+                        "",
+                        "\"x\""
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "SetNumberVariable"
+                      },
+                      "parameters": [
+                        "Rot",
+                        "=",
+                        "1"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetNumberVariable"
+                      },
+                      "parameters": [
+                        "Steps",
+                        "=",
+                        "1"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Comment",
+                  "color": {
+                    "b": 109,
+                    "g": 230,
+                    "r": 255,
+                    "textB": 0,
+                    "textG": 0,
+                    "textR": 0
+                  },
+                  "comment": "Gravity. It waits while the player is moving or turning in the same frame."
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "NumberVariable"
+                      },
+                      "parameters": [
+                        "MoveX",
+                        "=",
+                        "0"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "NumberVariable"
+                      },
+                      "parameters": [
+                        "Rot",
+                        "=",
+                        "0"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "CompareTimer"
+                      },
+                      "parameters": [
+                        "",
+                        "\"Fall\"",
+                        ">",
+                        "FallDelay"
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "SetNumberVariable"
+                      },
+                      "parameters": [
+                        "MoveY",
+                        "=",
+                        "1"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetNumberVariable"
+                      },
+                      "parameters": [
+                        "Steps",
+                        "=",
+                        "1"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "ResetTimer"
+                      },
+                      "parameters": [
+                        "",
+                        "\"Fall\""
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "NumberVariable"
+                      },
+                      "parameters": [
+                        "MoveX",
+                        "=",
+                        "0"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "NumberVariable"
+                      },
+                      "parameters": [
+                        "Rot",
+                        "=",
+                        "0"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "KeyFromTextPressed"
+                      },
+                      "parameters": [
+                        "",
+                        "\"Down\""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "CompareTimer"
+                      },
+                      "parameters": [
+                        "",
+                        "\"Fall\"",
+                        ">",
+                        "0.04"
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "SetNumberVariable"
+                      },
+                      "parameters": [
+                        "MoveY",
+                        "=",
+                        "1"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetNumberVariable"
+                      },
+                      "parameters": [
+                        "Steps",
+                        "=",
+                        "1"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "ResetTimer"
+                      },
+                      "parameters": [
+                        "",
+                        "\"Fall\""
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "KeyFromTextJustPressed"
+                      },
+                      "parameters": [
+                        "",
+                        "\"Space\""
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "SetNumberVariable"
+                      },
+                      "parameters": [
+                        "MoveX",
+                        "=",
+                        "0"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetNumberVariable"
+                      },
+                      "parameters": [
+                        "Rot",
+                        "=",
+                        "0"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetNumberVariable"
+                      },
+                      "parameters": [
+                        "MoveY",
+                        "=",
+                        "1"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetNumberVariable"
+                      },
+                      "parameters": [
+                        "Steps",
+                        "=",
+                        "22"
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "parameters": []
+        },
+        {
+          "colorB": 228,
+          "colorG": 176,
+          "colorR": 74,
+          "creationTime": 0,
+          "name": "Move the piece",
+          "source": "",
+          "type": "BuiltinCommonInstructions::Group",
+          "events": [
+            {
+              "type": "BuiltinCommonInstructions::Comment",
+              "color": {
+                "b": 109,
+                "g": 230,
+                "r": 255,
+                "textB": 0,
+                "textG": 0,
+                "textR": 0
+              },
+              "comment": "Remember where the piece was, move it, then check it isn't inside a wall, the floor or another block. If it is, put it back. A blocked turn also tries one cell right, then one cell left (the 'Kicks' table) before giving up."
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "StringVariable"
+                  },
+                  "parameters": [
+                    "State",
+                    "=",
+                    "\"Playing\""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "NumberVariable"
+                  },
+                  "parameters": [
+                    "Steps",
+                    ">",
+                    "0"
+                  ]
+                }
+              ],
+              "actions": [],
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::Repeat",
+                  "repeatExpression": "Steps",
+                  "conditions": [],
+                  "actions": [],
+                  "events": [
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "SetNumberObjectVariable"
+                          },
+                          "parameters": [
+                            "Active",
+                            "OldX",
+                            "=",
+                            "Active.X()"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "SetNumberObjectVariable"
+                          },
+                          "parameters": [
+                            "Active",
+                            "OldY",
+                            "=",
+                            "Active.Y()"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "SetNumberVariable"
+                          },
+                          "parameters": [
+                            "OldPivotX",
+                            "=",
+                            "PivotX"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "SetNumberVariable"
+                          },
+                          "parameters": [
+                            "OldPivotY",
+                            "=",
+                            "PivotY"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "SetNumberVariable"
+                          },
+                          "parameters": [
+                            "Done",
+                            "=",
+                            "0"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "SetNumberVariable"
+                          },
+                          "parameters": [
+                            "Try",
+                            "=",
+                            "0"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "SetNumberVariable"
+                          },
+                          "parameters": [
+                            "Tries",
+                            "=",
+                            "1 + Rot * 2"
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "BuiltinCommonInstructions::Repeat",
+                      "repeatExpression": "3",
+                      "conditions": [],
+                      "actions": [],
+                      "events": [
+                        {
+                          "type": "BuiltinCommonInstructions::Standard",
+                          "conditions": [
+                            {
+                              "type": {
+                                "value": "NumberVariable"
+                              },
+                              "parameters": [
+                                "Done",
+                                "=",
+                                "0"
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "NumberVariable"
+                              },
+                              "parameters": [
+                                "Try",
+                                "<",
+                                "Tries"
+                              ]
+                            }
+                          ],
+                          "actions": [
+                            {
+                              "type": {
+                                "value": "SetX"
+                              },
+                              "parameters": [
+                                "Active",
+                                "=",
+                                "Active.OldX + MoveX * 32 + Kicks[Try]"
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "SetY"
+                              },
+                              "parameters": [
+                                "Active",
+                                "=",
+                                "Active.OldY + MoveY * 32"
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "SetNumberVariable"
+                              },
+                              "parameters": [
+                                "PivotX",
+                                "=",
+                                "OldPivotX + MoveX * 32 + Kicks[Try]"
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "SetNumberVariable"
+                              },
+                              "parameters": [
+                                "PivotY",
+                                "=",
+                                "OldPivotY + MoveY * 32"
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "SetNumberVariable"
+                              },
+                              "parameters": [
+                                "Checking",
+                                "=",
+                                "1"
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "SetNumberVariable"
+                              },
+                              "parameters": [
+                                "Blocked",
+                                "=",
+                                "0"
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "BuiltinCommonInstructions::Comment",
+                          "color": {
+                            "b": 109,
+                            "g": 230,
+                            "r": 255,
+                            "textB": 0,
+                            "textG": 0,
+                            "textR": 0
+                          },
+                          "comment": "Turn a quarter clockwise around the pivot."
+                        },
+                        {
+                          "type": "BuiltinCommonInstructions::Standard",
+                          "conditions": [
+                            {
+                              "type": {
+                                "value": "NumberVariable"
+                              },
+                              "parameters": [
+                                "Checking",
+                                "=",
+                                "1"
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "NumberVariable"
+                              },
+                              "parameters": [
+                                "Rot",
+                                "=",
+                                "1"
+                              ]
+                            }
+                          ],
+                          "actions": [
+                            {
+                              "type": {
+                                "value": "SetNumberObjectVariable"
+                              },
+                              "parameters": [
+                                "Active",
+                                "DX",
+                                "=",
+                                "Active.X() + 16 - PivotX"
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "SetNumberObjectVariable"
+                              },
+                              "parameters": [
+                                "Active",
+                                "DY",
+                                "=",
+                                "Active.Y() + 16 - PivotY"
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "SetX"
+                              },
+                              "parameters": [
+                                "Active",
+                                "=",
+                                "PivotX - Active.DY - 16"
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "SetY"
+                              },
+                              "parameters": [
+                                "Active",
+                                "=",
+                                "PivotY + Active.DX - 16"
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "BuiltinCommonInstructions::Standard",
+                          "conditions": [
+                            {
+                              "type": {
+                                "value": "NumberVariable"
+                              },
+                              "parameters": [
+                                "Checking",
+                                "=",
+                                "1"
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "CollisionNP"
+                              },
+                              "parameters": [
+                                "Active",
+                                "Settled",
+                                "",
+                                "",
+                                ""
+                              ]
+                            }
+                          ],
+                          "actions": [
+                            {
+                              "type": {
+                                "value": "SetNumberVariable"
+                              },
+                              "parameters": [
+                                "Blocked",
+                                "=",
+                                "1"
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "BuiltinCommonInstructions::Standard",
+                          "conditions": [
+                            {
+                              "type": {
+                                "value": "NumberVariable"
+                              },
+                              "parameters": [
+                                "Checking",
+                                "=",
+                                "1"
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "PosX"
+                              },
+                              "parameters": [
+                                "Active",
+                                "<",
+                                "BoardX"
+                              ]
+                            }
+                          ],
+                          "actions": [
+                            {
+                              "type": {
+                                "value": "SetNumberVariable"
+                              },
+                              "parameters": [
+                                "Blocked",
+                                "=",
+                                "1"
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "BuiltinCommonInstructions::Standard",
+                          "conditions": [
+                            {
+                              "type": {
+                                "value": "NumberVariable"
+                              },
+                              "parameters": [
+                                "Checking",
+                                "=",
+                                "1"
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "PosX"
+                              },
+                              "parameters": [
+                                "Active",
+                                ">",
+                                "BoardX + 288"
+                              ]
+                            }
+                          ],
+                          "actions": [
+                            {
+                              "type": {
+                                "value": "SetNumberVariable"
+                              },
+                              "parameters": [
+                                "Blocked",
+                                "=",
+                                "1"
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "BuiltinCommonInstructions::Standard",
+                          "conditions": [
+                            {
+                              "type": {
+                                "value": "NumberVariable"
+                              },
+                              "parameters": [
+                                "Checking",
+                                "=",
+                                "1"
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "PosY"
+                              },
+                              "parameters": [
+                                "Active",
+                                ">",
+                                "BoardY + 608"
+                              ]
+                            }
+                          ],
+                          "actions": [
+                            {
+                              "type": {
+                                "value": "SetNumberVariable"
+                              },
+                              "parameters": [
+                                "Blocked",
+                                "=",
+                                "1"
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "BuiltinCommonInstructions::Standard",
+                          "conditions": [
+                            {
+                              "type": {
+                                "value": "NumberVariable"
+                              },
+                              "parameters": [
+                                "Checking",
+                                "=",
+                                "1"
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "NumberVariable"
+                              },
+                              "parameters": [
+                                "Blocked",
+                                "=",
+                                "0"
+                              ]
+                            }
+                          ],
+                          "actions": [
+                            {
+                              "type": {
+                                "value": "SetNumberVariable"
+                              },
+                              "parameters": [
+                                "Done",
+                                "=",
+                                "1"
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "BuiltinCommonInstructions::Standard",
+                          "conditions": [],
+                          "actions": [
+                            {
+                              "type": {
+                                "value": "SetNumberVariable"
+                              },
+                              "parameters": [
+                                "Try",
+                                "+",
+                                "1"
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "SetNumberVariable"
+                              },
+                              "parameters": [
+                                "Checking",
+                                "=",
+                                "0"
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "NumberVariable"
+                          },
+                          "parameters": [
+                            "Done",
+                            "=",
+                            "0"
+                          ]
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "SetX"
+                          },
+                          "parameters": [
+                            "Active",
+                            "=",
+                            "Active.OldX"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "SetY"
+                          },
+                          "parameters": [
+                            "Active",
+                            "=",
+                            "Active.OldY"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "SetNumberVariable"
+                          },
+                          "parameters": [
+                            "PivotX",
+                            "=",
+                            "OldPivotX"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "SetNumberVariable"
+                          },
+                          "parameters": [
+                            "PivotY",
+                            "=",
+                            "OldPivotY"
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "BuiltinCommonInstructions::Comment",
+                      "color": {
+                        "b": 109,
+                        "g": 230,
+                        "r": 255,
+                        "textB": 0,
+                        "textG": 0,
+                        "textR": 0
+                      },
+                      "comment": "Couldn't move down: the piece has landed."
+                    },
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "NumberVariable"
+                          },
+                          "parameters": [
+                            "Done",
+                            "=",
+                            "0"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "NumberVariable"
+                          },
+                          "parameters": [
+                            "MoveY",
+                            "=",
+                            "1"
+                          ]
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "SetNumberVariable"
+                          },
+                          "parameters": [
+                            "Landed",
+                            "=",
+                            "1"
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "parameters": []
+        },
+        {
+          "colorB": 228,
+          "colorG": 176,
+          "colorR": 74,
+          "creationTime": 0,
+          "name": "Land the piece and clear lines",
+          "source": "",
+          "type": "BuiltinCommonInstructions::Group",
+          "events": [
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "NumberVariable"
+                  },
+                  "parameters": [
+                    "Landed",
+                    "=",
+                    "1"
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "SetNumberVariable"
+                  },
+                  "parameters": [
+                    "Landed",
+                    "=",
+                    "0"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "SetNumberVariable"
+                  },
+                  "parameters": [
+                    "SpawnNeeded",
+                    "=",
+                    "1"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "SetNumberVariable"
+                  },
+                  "parameters": [
+                    "Cleared",
+                    "=",
+                    "0"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "SetNumberVariable"
+                  },
+                  "parameters": [
+                    "LinesNow",
+                    "=",
+                    "0"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "SetNumberVariable"
+                  },
+                  "parameters": [
+                    "RowY",
+                    "=",
+                    "BoardY + 608"
+                  ]
+                }
+              ],
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::ForEach",
+                  "object": "Active",
+                  "conditions": [],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "Create"
+                      },
+                      "parameters": [
+                        "",
+                        "Settled",
+                        "Active.X()",
+                        "Active.Y()",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "ChangeColor"
+                      },
+                      "parameters": [
+                        "Settled",
+                        "Shapes[PieceType].Color"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "Delete"
+                      },
+                      "parameters": [
+                        "Active",
+                        ""
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Comment",
+                  "color": {
+                    "b": 109,
+                    "g": 230,
+                    "r": 255,
+                    "textB": 0,
+                    "textG": 0,
+                    "textR": 0
+                  },
+                  "comment": "Check each row from the bottom up. A row with 10 blocks is removed and everything above it drops one cell; the same row is then checked again."
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Repeat",
+                  "repeatExpression": "24",
+                  "conditions": [],
+                  "actions": [],
+                  "events": [
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "PosY"
+                          },
+                          "parameters": [
+                            "Settled",
+                            "=",
+                            "RowY"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "PickedInstancesCount"
+                          },
+                          "parameters": [
+                            "Settled",
+                            "=",
+                            "10"
+                          ]
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "Delete"
+                          },
+                          "parameters": [
+                            "Settled",
+                            ""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "SetNumberVariable"
+                          },
+                          "parameters": [
+                            "Cleared",
+                            "=",
+                            "1"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "SetNumberVariable"
+                          },
+                          "parameters": [
+                            "LinesNow",
+                            "+",
+                            "1"
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "NumberVariable"
+                          },
+                          "parameters": [
+                            "Cleared",
+                            "=",
+                            "1"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "PosY"
+                          },
+                          "parameters": [
+                            "Settled",
+                            "<",
+                            "RowY"
+                          ]
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "SetY"
+                          },
+                          "parameters": [
+                            "Settled",
+                            "+",
+                            "32"
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "NumberVariable"
+                          },
+                          "parameters": [
+                            "Cleared",
+                            "=",
+                            "0"
+                          ]
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "SetNumberVariable"
+                          },
+                          "parameters": [
+                            "RowY",
+                            "-",
+                            "32"
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "SetNumberVariable"
+                          },
+                          "parameters": [
+                            "Cleared",
+                            "=",
+                            "0"
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "NumberVariable"
+                      },
+                      "parameters": [
+                        "LinesNow",
+                        ">",
+                        "0"
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "SetNumberVariable"
+                      },
+                      "parameters": [
+                        "Lines",
+                        "+",
+                        "LinesNow"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetNumberVariable"
+                      },
+                      "parameters": [
+                        "Score",
+                        "+",
+                        "LineScores[LinesNow] * Level"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetNumberVariable"
+                      },
+                      "parameters": [
+                        "Level",
+                        "=",
+                        "floor(Lines / 10) + 1"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetNumberVariable"
+                      },
+                      "parameters": [
+                        "FallDelay",
+                        "=",
+                        "max(0.08, 0.8 - (Level - 1) * 0.07)"
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "parameters": []
+        },
+        {
+          "colorB": 228,
+          "colorG": 176,
+          "colorR": 74,
+          "creationTime": 0,
+          "name": "Game over",
+          "source": "",
+          "type": "BuiltinCommonInstructions::Group",
+          "events": [
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "StringVariable"
+                  },
+                  "parameters": [
+                    "State",
+                    "=",
+                    "\"GameOver\""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "KeyFromTextJustPressed"
+                  },
+                  "parameters": [
+                    "",
+                    "\"Return\""
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "Scene"
+                  },
+                  "parameters": [
+                    "",
+                    "\"Game\"",
+                    ""
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "StringVariable"
+                  },
+                  "parameters": [
+                    "State",
+                    "=",
+                    "\"GameOver\""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "KeyFromTextJustPressed"
+                  },
+                  "parameters": [
+                    "",
+                    "\"r\""
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "Scene"
+                  },
+                  "parameters": [
+                    "",
+                    "\"Game\"",
+                    ""
+                  ]
+                }
+              ]
+            }
+          ],
+          "parameters": []
+        },
+        {
+          "colorB": 228,
+          "colorG": 176,
+          "colorR": 74,
+          "creationTime": 0,
+          "name": "Score panel",
+          "source": "",
+          "type": "BuiltinCommonInstructions::Group",
+          "events": [
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [],
+              "actions": [
+                {
+                  "type": {
+                    "value": "TextContainerCapability::TextContainerBehavior::SetValue"
+                  },
+                  "parameters": [
+                    "ScoreText",
+                    "Text",
+                    "=",
+                    "\"SCORE\" + NewLine() + ToString(Score)"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "TextContainerCapability::TextContainerBehavior::SetValue"
+                  },
+                  "parameters": [
+                    "LinesText",
+                    "Text",
+                    "=",
+                    "\"LINES\" + NewLine() + ToString(Lines)"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "TextContainerCapability::TextContainerBehavior::SetValue"
+                  },
+                  "parameters": [
+                    "LevelText",
+                    "Text",
+                    "=",
+                    "\"LEVEL\" + NewLine() + ToString(Level)"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "TextContainerCapability::TextContainerBehavior::SetValue"
+                  },
+                  "parameters": [
+                    "BestText",
+                    "Text",
+                    "=",
+                    "\"BEST\" + NewLine() + ToString(max(Best, Score))"
+                  ]
+                }
+              ]
+            }
+          ],
+          "parameters": []
+        }
+      ],
+      "layers": [
+        {
+          "ambientLightColorB": 200,
+          "ambientLightColorG": 200,
+          "ambientLightColorR": 200,
+          "camera2DPlaneMaxDrawingDistance": 5000,
+          "camera3DFarPlaneDistance": 10000,
+          "camera3DFieldOfView": 45,
+          "camera3DNearPlaneDistance": 0.1,
+          "cameraType": "perspective",
+          "followBaseLayerCamera": false,
+          "isLightingLayer": false,
+          "isLocked": false,
+          "name": "",
+          "renderingType": "",
+          "visibility": true,
+          "cameras": [
+            {
+              "defaultSize": true,
+              "defaultViewport": true,
+              "height": 0,
+              "viewportBottom": 1,
+              "viewportLeft": 0,
+              "viewportRight": 1,
+              "viewportTop": 0,
+              "width": 0
+            }
+          ],
+          "effects": []
+        },
+        {
+          "ambientLightColorB": 200,
+          "ambientLightColorG": 200,
+          "ambientLightColorR": 200,
+          "camera2DPlaneMaxDrawingDistance": 5000,
+          "camera3DFarPlaneDistance": 10000,
+          "camera3DFieldOfView": 45,
+          "camera3DNearPlaneDistance": 0.1,
+          "cameraType": "perspective",
+          "followBaseLayerCamera": false,
+          "isLightingLayer": false,
+          "isLocked": false,
+          "name": "UI",
+          "renderingType": "",
+          "visibility": true,
+          "cameras": [
+            {
+              "defaultSize": true,
+              "defaultViewport": true,
+              "height": 0,
+              "viewportBottom": 1,
+              "viewportLeft": 0,
+              "viewportRight": 1,
+              "viewportTop": 0,
+              "width": 0
+            }
+          ],
+          "effects": []
+        }
+      ],
+      "behaviorsSharedData": []
+    }
+  ],
+  "externalEvents": [],
+  "eventsFunctionsExtensions": [],
+  "externalLayouts": []
+}
