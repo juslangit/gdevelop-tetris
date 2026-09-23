@@ -133,60 +133,75 @@
         "gridType": "rectangular",
         "gridWidth": 32,
         "gridHeight": 32,
+        "gridDepth": 32,
         "gridOffsetX": 0,
         "gridOffsetY": 0,
+        "gridOffsetZ": 0,
         "gridColor": 10401023,
         "gridAlpha": 0.3,
         "snap": true,
         "zoomFactor": 1,
-        "windowMask": false
+        "windowMask": false,
+        "selectedLayer": "",
+        "gameEditorMode": "instances-editor"
       },
       "objectsGroups": [],
       "variables": [
         {
           "name": "Shapes",
+          "persistentUuid": "09a4f65d-1be3-4aab-b7bd-bc2687a03571",
           "type": "array",
           "children": [
             {
+              "persistentUuid": "693aa038-86b6-47af-93ff-da7f16c35194",
               "type": "structure",
               "children": [
                 {
                   "name": "Color",
+                  "persistentUuid": "9f8b22d2-9245-4326-b3a7-cd2c18096c5e",
                   "type": "string",
                   "value": "0;220;240"
                 },
                 {
                   "name": "Name",
+                  "persistentUuid": "7c3df6c3-691b-4393-b588-0d94a3fc1fe5",
                   "type": "string",
                   "value": "I"
                 },
                 {
                   "name": "PX",
+                  "persistentUuid": "766f562e-5652-4e14-aea8-90fb9557d4b4",
                   "type": "number",
                   "value": 2
                 },
                 {
                   "name": "PY",
+                  "persistentUuid": "0aeb2636-11b5-424c-a70c-4cf61fb1603f",
                   "type": "number",
                   "value": 2
                 },
                 {
                   "name": "X",
+                  "persistentUuid": "7a33e410-a63e-4385-be90-911ba258350b",
                   "type": "array",
                   "children": [
                     {
+                      "persistentUuid": "71cf6051-87c2-4fa3-a8fd-09977497004d",
                       "type": "number",
                       "value": 0
                     },
                     {
+                      "persistentUuid": "28da0b93-ad74-40c1-9e0a-a017d8d3cbdd",
                       "type": "number",
                       "value": 1
                     },
                     {
+                      "persistentUuid": "3567acd6-302b-46ce-bb21-bf9406d1cb24",
                       "type": "number",
                       "value": 2
                     },
                     {
+                      "persistentUuid": "f4db0a42-1805-428b-9515-d62748e20093",
                       "type": "number",
                       "value": 3
                     }
@@ -194,21 +209,26 @@
                 },
                 {
                   "name": "Y",
+                  "persistentUuid": "6a0dad7c-6073-405d-8dec-d090587a36a0",
                   "type": "array",
                   "children": [
                     {
+                      "persistentUuid": "df89ed52-bf98-42dc-8f23-36797455cb14",
                       "type": "number",
                       "value": 1
                     },
                     {
+                      "persistentUuid": "90cabf36-bfc3-4567-80eb-45f73d206221",
                       "type": "number",
                       "value": 1
                     },
                     {
+                      "persistentUuid": "e29d6f04-caa1-40da-8075-f2882f9f5f0f",
                       "type": "number",
                       "value": 1
                     },
                     {
+                      "persistentUuid": "78059317-6c1e-47dd-b514-fc7c463abd5f",
                       "type": "number",
                       "value": 1
                     }
@@ -217,45 +237,55 @@
               ]
             },
             {
+              "persistentUuid": "b24a7211-10ca-474b-9395-be49498183e7",
               "type": "structure",
               "children": [
                 {
                   "name": "Color",
+                  "persistentUuid": "ef79ec61-fe77-463c-a3cc-1c8f0a4840d8",
                   "type": "string",
                   "value": "250;215;0"
                 },
                 {
                   "name": "Name",
+                  "persistentUuid": "c3e53270-da71-4e64-bd73-c784fab41fe5",
                   "type": "string",
                   "value": "O"
                 },
                 {
                   "name": "PX",
+                  "persistentUuid": "b67f939f-64fe-4e99-8d3f-7e1fcff6f679",
                   "type": "number",
                   "value": 2
                 },
                 {
                   "name": "PY",
+                  "persistentUuid": "d979b04e-9d85-4fd1-977c-d6766451f7eb",
                   "type": "number",
                   "value": 1
                 },
                 {
                   "name": "X",
+                  "persistentUuid": "7d01cad5-1555-406c-ac3b-a2ef833a78d7",
                   "type": "array",
                   "children": [
                     {
+                      "persistentUuid": "a495e6f9-c649-4b83-8e84-02694a0e7e3c",
                       "type": "number",
                       "value": 1
                     },
                     {
+                      "persistentUuid": "6c8177c4-832b-440e-b7a2-eb6792a870af",
                       "type": "number",
                       "value": 2
                     },
                     {
+                      "persistentUuid": "4daff680-e2af-4fe1-9900-3e64c06ffbd5",
                       "type": "number",
                       "value": 1
                     },
                     {
+                      "persistentUuid": "bdb0de23-2470-4981-b63b-81b83a879cad",
                       "type": "number",
                       "value": 2
                     }
@@ -263,21 +293,26 @@
                 },
                 {
                   "name": "Y",
+                  "persistentUuid": "0974767c-4d6b-47b7-8f86-5b915010ecf9",
                   "type": "array",
                   "children": [
                     {
+                      "persistentUuid": "c01ac5c5-d63d-49fe-b3b7-13b5dfc9043e",
                       "type": "number",
                       "value": 0
                     },
                     {
+                      "persistentUuid": "7a67ee0f-1298-4842-9686-28ec335c910d",
                       "type": "number",
                       "value": 0
                     },
                     {
+                      "persistentUuid": "6a973767-cd64-4224-aa7d-371f2eff80be",
                       "type": "number",
                       "value": 1
                     },
                     {
+                      "persistentUuid": "c23bf9d7-171e-4033-8beb-b4e8a68d8fed",
                       "type": "number",
                       "value": 1
                     }
@@ -286,45 +321,55 @@
               ]
             },
             {
+              "persistentUuid": "24ffe2af-e977-4ae6-b41e-16613aaa57dc",
               "type": "structure",
               "children": [
                 {
                   "name": "Color",
+                  "persistentUuid": "b01530bd-bdfc-4743-bec4-2924e7b4312f",
                   "type": "string",
                   "value": "170;60;230"
                 },
                 {
                   "name": "Name",
+                  "persistentUuid": "67204e4b-afdb-464d-b918-92fa87b2b610",
                   "type": "string",
                   "value": "T"
                 },
                 {
                   "name": "PX",
+                  "persistentUuid": "b0679903-a4af-48bc-8f43-6d6d10f97328",
                   "type": "number",
                   "value": 1.5
                 },
                 {
                   "name": "PY",
+                  "persistentUuid": "d80fd5ea-1c1e-4c51-81b3-badc8c4c9955",
                   "type": "number",
                   "value": 1.5
                 },
                 {
                   "name": "X",
+                  "persistentUuid": "09393634-9c9b-4ae0-8204-7fec2a3f64ff",
                   "type": "array",
                   "children": [
                     {
+                      "persistentUuid": "0cb6c919-9c25-4e1e-8b77-6e6a4456f8b9",
                       "type": "number",
                       "value": 1
                     },
                     {
+                      "persistentUuid": "848e6aee-d905-4934-acce-80ddc899d520",
                       "type": "number",
                       "value": 0
                     },
                     {
+                      "persistentUuid": "2712ac8d-c90c-4d4d-8660-80524191061b",
                       "type": "number",
                       "value": 1
                     },
                     {
+                      "persistentUuid": "128f9da3-3f49-45ce-b4c9-b6c9a7175d06",
                       "type": "number",
                       "value": 2
                     }
@@ -332,21 +377,26 @@
                 },
                 {
                   "name": "Y",
+                  "persistentUuid": "253b787f-8624-43f1-ad27-f3d73adbad2c",
                   "type": "array",
                   "children": [
                     {
+                      "persistentUuid": "3612cd1e-2459-4a03-8149-2d391c6d967c",
                       "type": "number",
                       "value": 0
                     },
                     {
+                      "persistentUuid": "26ea7eb0-cfa1-4361-9202-e1db2e205203",
                       "type": "number",
                       "value": 1
                     },
                     {
+                      "persistentUuid": "124946b6-ff2d-40fe-a55b-57d4abc6f170",
                       "type": "number",
                       "value": 1
                     },
                     {
+                      "persistentUuid": "ab6e8f4c-c59d-46c5-9125-36a7678ca271",
                       "type": "number",
                       "value": 1
                     }
@@ -355,45 +405,55 @@
               ]
             },
             {
+              "persistentUuid": "19279c56-3fbd-4baf-b304-2b8837c9c0a3",
               "type": "structure",
               "children": [
                 {
                   "name": "Color",
+                  "persistentUuid": "680df020-13de-4c97-bbf1-3e04eeb37be9",
                   "type": "string",
                   "value": "60;210;80"
                 },
                 {
                   "name": "Name",
+                  "persistentUuid": "b84d26ee-c72f-4490-9794-8ed7c07c51cc",
                   "type": "string",
                   "value": "S"
                 },
                 {
                   "name": "PX",
+                  "persistentUuid": "1e05ff38-2ae5-4a19-9732-7b709935d623",
                   "type": "number",
                   "value": 1.5
                 },
                 {
                   "name": "PY",
+                  "persistentUuid": "e7d2f7b3-c665-4db9-b4a8-3bd68524ca6e",
                   "type": "number",
                   "value": 1.5
                 },
                 {
                   "name": "X",
+                  "persistentUuid": "48a282ea-6e5b-4cd5-8d52-05b2f26d4ed9",
                   "type": "array",
                   "children": [
                     {
+                      "persistentUuid": "1b55946f-604f-417d-afb8-b6d9a8d74604",
                       "type": "number",
                       "value": 1
                     },
                     {
+                      "persistentUuid": "7dc47b43-17d0-40af-b1a0-3054105529d4",
                       "type": "number",
                       "value": 2
                     },
                     {
+                      "persistentUuid": "90bae4a0-cb30-493e-b2a1-e2eed098efa9",
                       "type": "number",
                       "value": 0
                     },
                     {
+                      "persistentUuid": "529c7985-aba7-495c-a0c3-cf32eeeac35e",
                       "type": "number",
                       "value": 1
                     }
@@ -401,21 +461,26 @@
                 },
                 {
                   "name": "Y",
+                  "persistentUuid": "344ea73b-5805-408e-8207-d1d7728c1c46",
                   "type": "array",
                   "children": [
                     {
+                      "persistentUuid": "ba7450a4-ef40-4a87-a681-d1fa02a90d6f",
                       "type": "number",
                       "value": 0
                     },
                     {
+                      "persistentUuid": "65b1a811-dbe7-40dd-9548-6ee8aef10e6b",
                       "type": "number",
                       "value": 0
                     },
                     {
+                      "persistentUuid": "bbc6d46d-1cce-4262-8e25-5d2f30d83c9b",
                       "type": "number",
                       "value": 1
                     },
                     {
+                      "persistentUuid": "862ac01a-9205-4b37-9f6f-139ca78efb45",
                       "type": "number",
                       "value": 1
                     }
@@ -424,45 +489,55 @@
               ]
             },
             {
+              "persistentUuid": "d9836f62-4cd1-4220-9270-ce317b435210",
               "type": "structure",
               "children": [
                 {
                   "name": "Color",
+                  "persistentUuid": "4ca665bf-8eb4-4e45-b9fd-326893c85e53",
                   "type": "string",
                   "value": "240;60;60"
                 },
                 {
                   "name": "Name",
+                  "persistentUuid": "4e668fe7-9522-4bc4-9f8f-c0939f68b5c5",
                   "type": "string",
                   "value": "Z"
                 },
                 {
                   "name": "PX",
+                  "persistentUuid": "1be09681-8c64-4523-a3e8-86317ec5a812",
                   "type": "number",
                   "value": 1.5
                 },
                 {
                   "name": "PY",
+                  "persistentUuid": "bb8a2675-9abe-4651-a472-de85e98874ae",
                   "type": "number",
                   "value": 1.5
                 },
                 {
                   "name": "X",
+                  "persistentUuid": "629bfa7e-3156-4668-b25f-da77b92e709e",
                   "type": "array",
                   "children": [
                     {
+                      "persistentUuid": "1c10ae63-1548-44f9-a0c9-e04e43da7bf3",
                       "type": "number",
                       "value": 0
                     },
                     {
+                      "persistentUuid": "efa916e8-39b7-4832-9a8c-1cd6748ce68f",
                       "type": "number",
                       "value": 1
                     },
                     {
+                      "persistentUuid": "3d47f3fe-bdd8-4b55-a786-20e0b162b5a8",
                       "type": "number",
                       "value": 1
                     },
                     {
+                      "persistentUuid": "40fc24b2-da8e-482c-b9cb-467f193c6f63",
                       "type": "number",
                       "value": 2
                     }
@@ -470,21 +545,26 @@
                 },
                 {
                   "name": "Y",
+                  "persistentUuid": "41119333-ee2b-4064-b0fe-750aac2b705d",
                   "type": "array",
                   "children": [
                     {
+                      "persistentUuid": "112bd989-f174-4fe3-b2eb-d05f9aeccde4",
                       "type": "number",
                       "value": 0
                     },
                     {
+                      "persistentUuid": "06e11ac7-60a4-4d93-86a5-ebcf7991896b",
                       "type": "number",
                       "value": 0
                     },
                     {
+                      "persistentUuid": "6cd91393-551f-4ef9-8cd3-399670b7b277",
                       "type": "number",
                       "value": 1
                     },
                     {
+                      "persistentUuid": "63b76529-758d-4673-9f70-27894f4ad2b1",
                       "type": "number",
                       "value": 1
                     }
@@ -493,45 +573,55 @@
               ]
             },
             {
+              "persistentUuid": "cc353165-ddf8-4c53-8ae9-da5d30f5ab4d",
               "type": "structure",
               "children": [
                 {
                   "name": "Color",
+                  "persistentUuid": "367308b1-893d-4413-b320-58c3ad2a109d",
                   "type": "string",
                   "value": "50;100;240"
                 },
                 {
                   "name": "Name",
+                  "persistentUuid": "0f101023-f1dd-4037-9a01-60ff398f39af",
                   "type": "string",
                   "value": "J"
                 },
                 {
                   "name": "PX",
+                  "persistentUuid": "2d33d25e-69fc-4f63-88a7-748b46c474ec",
                   "type": "number",
                   "value": 1.5
                 },
                 {
                   "name": "PY",
+                  "persistentUuid": "b7397245-6edb-4f27-8c41-b4891d4083ae",
                   "type": "number",
                   "value": 1.5
                 },
                 {
                   "name": "X",
+                  "persistentUuid": "82f7e5c9-752d-449c-b02b-a68538328ee9",
                   "type": "array",
                   "children": [
                     {
+                      "persistentUuid": "eaebe651-05fe-4dfb-88c2-e3f364c4213f",
                       "type": "number",
                       "value": 0
                     },
                     {
+                      "persistentUuid": "16dcc127-6576-4495-b4b9-34d42ff49f03",
                       "type": "number",
                       "value": 0
                     },
                     {
+                      "persistentUuid": "01a3011b-2828-4b2d-8439-b445da71f5f6",
                       "type": "number",
                       "value": 1
                     },
                     {
+                      "persistentUuid": "ad86e6d7-5156-444f-b889-0d73984c9572",
                       "type": "number",
                       "value": 2
                     }
@@ -539,21 +629,26 @@
                 },
                 {
                   "name": "Y",
+                  "persistentUuid": "5cfa228e-9d68-46b7-b686-d698d6d3ecab",
                   "type": "array",
                   "children": [
                     {
+                      "persistentUuid": "0ecc6ef8-7288-42c1-bc07-7887ee0a89bc",
                       "type": "number",
                       "value": 0
                     },
                     {
+                      "persistentUuid": "3b3a320c-dffc-4b94-8840-0f2681193284",
                       "type": "number",
                       "value": 1
                     },
                     {
+                      "persistentUuid": "66459223-2955-4071-9ae4-ce7e54794e44",
                       "type": "number",
                       "value": 1
                     },
                     {
+                      "persistentUuid": "6b6a169b-d6eb-4e06-a4d5-997cebfcceef",
                       "type": "number",
                       "value": 1
                     }
@@ -562,45 +657,55 @@
               ]
             },
             {
+              "persistentUuid": "00bdf074-d6e8-4d5b-82fb-56a6e5fbcd29",
               "type": "structure",
               "children": [
                 {
                   "name": "Color",
+                  "persistentUuid": "50dedc3f-aeb9-47b1-a8fa-e3106b81ea50",
                   "type": "string",
                   "value": "250;150;30"
                 },
                 {
                   "name": "Name",
+                  "persistentUuid": "fd2bedd2-14c4-48c2-a91e-0c1b79fd894d",
                   "type": "string",
                   "value": "L"
                 },
                 {
                   "name": "PX",
+                  "persistentUuid": "41df118a-9340-4440-abae-9bc3aa7d4253",
                   "type": "number",
                   "value": 1.5
                 },
                 {
                   "name": "PY",
+                  "persistentUuid": "c75370d7-af04-4933-8475-2ddf909f7932",
                   "type": "number",
                   "value": 1.5
                 },
                 {
                   "name": "X",
+                  "persistentUuid": "859c8cdf-6bc6-4335-bf25-6d2136052242",
                   "type": "array",
                   "children": [
                     {
+                      "persistentUuid": "5aea8277-35ac-4d5b-924d-c4c8b68b89ba",
                       "type": "number",
                       "value": 2
                     },
                     {
+                      "persistentUuid": "a07ac493-2b64-4915-8dbf-aea15eb404dc",
                       "type": "number",
                       "value": 0
                     },
                     {
+                      "persistentUuid": "14af50bc-e3bf-46de-97bc-9c0bbdf1d583",
                       "type": "number",
                       "value": 1
                     },
                     {
+                      "persistentUuid": "5e455625-1e20-4e53-8aa3-e16e6329cb58",
                       "type": "number",
                       "value": 2
                     }
@@ -608,21 +713,26 @@
                 },
                 {
                   "name": "Y",
+                  "persistentUuid": "c4afcf97-44e5-4717-8421-473cf66ed585",
                   "type": "array",
                   "children": [
                     {
+                      "persistentUuid": "db7b8197-a8cd-4c14-895c-3823b8b076a3",
                       "type": "number",
                       "value": 0
                     },
                     {
+                      "persistentUuid": "a3ae7542-78ef-485d-90bc-d19c349390e6",
                       "type": "number",
                       "value": 1
                     },
                     {
+                      "persistentUuid": "24e82140-b864-43bc-96bc-75a0a31eb421",
                       "type": "number",
                       "value": 1
                     },
                     {
+                      "persistentUuid": "1b75b791-dbf6-4ec9-a944-c4edfffc657d",
                       "type": "number",
                       "value": 1
                     }
@@ -634,17 +744,21 @@
         },
         {
           "name": "Kicks",
+          "persistentUuid": "9e805f57-f320-4ed7-b49b-9e2e2d23fd22",
           "type": "array",
           "children": [
             {
+              "persistentUuid": "be46ad57-afa8-490d-9b3d-7745234fc5e5",
               "type": "number",
               "value": 0
             },
             {
+              "persistentUuid": "6e476bf9-12e0-4182-97d6-88ba22648e51",
               "type": "number",
               "value": 32
             },
             {
+              "persistentUuid": "00849e6d-aa79-4d64-9541-6d930749aeb7",
               "type": "number",
               "value": -32
             }
@@ -652,25 +766,31 @@
         },
         {
           "name": "LineScores",
+          "persistentUuid": "7ccc211e-fa8d-48cd-b4bb-ea4abe2db9bd",
           "type": "array",
           "children": [
             {
+              "persistentUuid": "806cc4d4-867a-4fa4-b0b2-e2db81eaaaec",
               "type": "number",
               "value": 0
             },
             {
+              "persistentUuid": "a9683173-c40d-455e-9e75-c4b6f21421f2",
               "type": "number",
               "value": 100
             },
             {
+              "persistentUuid": "4a048690-e781-4f55-a0d7-e8a0b889a641",
               "type": "number",
               "value": 300
             },
             {
+              "persistentUuid": "c1480d6e-133a-486d-96fe-fbc500787279",
               "type": "number",
               "value": 500
             },
             {
+              "persistentUuid": "ca525262-b3d2-42ee-94fb-b48aaa399d61",
               "type": "number",
               "value": 800
             }
@@ -678,166 +798,199 @@
         },
         {
           "name": "BoardX",
+          "persistentUuid": "a93d9486-c97b-4a15-9733-7eb8840e4e2d",
           "type": "number",
           "value": 64
         },
         {
           "name": "BoardY",
+          "persistentUuid": "b417ad56-a62f-45ab-86ed-d0e183f5bd32",
           "type": "number",
           "value": 48
         },
         {
           "name": "SpawnX",
+          "persistentUuid": "75b45390-29df-41c9-ae0c-dbac5453b103",
           "type": "number",
           "value": 160
         },
         {
           "name": "SpawnY",
+          "persistentUuid": "0cc1c57e-9a40-41dd-8b1c-be048a263b7a",
           "type": "number",
           "value": 48
         },
         {
           "name": "PreviewX",
+          "persistentUuid": "5193cec7-d753-46c7-a733-aeffaa26cec2",
           "type": "number",
           "value": 464
         },
         {
           "name": "PreviewY",
+          "persistentUuid": "75434894-dec3-4de5-ae3d-65a15b27a529",
           "type": "number",
           "value": 176
         },
         {
           "name": "PieceType",
+          "persistentUuid": "7b94cfcc-1372-4fad-a422-2249e69eb472",
           "type": "number",
           "value": 0
         },
         {
           "name": "NextType",
+          "persistentUuid": "307cc514-5657-45e9-bc2d-2b5be609dff0",
           "type": "number",
           "value": 0
         },
         {
           "name": "PivotX",
+          "persistentUuid": "8868c191-b578-44f2-92ce-09176a176c8f",
           "type": "number",
           "value": 0
         },
         {
           "name": "PivotY",
+          "persistentUuid": "6e21280d-4965-45b1-b432-5b3e5def094d",
           "type": "number",
           "value": 0
         },
         {
           "name": "OldPivotX",
+          "persistentUuid": "1b9f5844-9c4d-4272-b6ac-9a68be1ff09e",
           "type": "number",
           "value": 0
         },
         {
           "name": "OldPivotY",
+          "persistentUuid": "e0b2857d-a1e6-4916-b0fc-a29f0b1a3cba",
           "type": "number",
           "value": 0
         },
         {
           "name": "MoveX",
+          "persistentUuid": "8255e992-9abd-4844-90a1-84ab38dc2ba6",
           "type": "number",
           "value": 0
         },
         {
           "name": "MoveY",
+          "persistentUuid": "dfadd2e5-b638-4cf5-98d7-8ccba0e9d4cd",
           "type": "number",
           "value": 0
         },
         {
           "name": "Rot",
+          "persistentUuid": "d6e8a899-1736-4ff0-bc2d-46bacbaafa70",
           "type": "number",
           "value": 0
         },
         {
           "name": "Steps",
+          "persistentUuid": "2b5e5588-0278-4020-864f-7c9a42da0354",
           "type": "number",
           "value": 0
         },
         {
           "name": "Try",
+          "persistentUuid": "580643a6-6f07-4a74-95e2-34993862808c",
           "type": "number",
           "value": 0
         },
         {
           "name": "Tries",
+          "persistentUuid": "cbf9411a-a720-40a0-9f02-d9903d74455b",
           "type": "number",
           "value": 1
         },
         {
           "name": "Checking",
+          "persistentUuid": "a0f2ff8b-df4e-4101-99a7-be4a9aa23fa7",
           "type": "number",
           "value": 0
         },
         {
           "name": "Blocked",
+          "persistentUuid": "0a3db30c-2931-4049-a8f6-fd1fa9a0a031",
           "type": "number",
           "value": 0
         },
         {
           "name": "Done",
+          "persistentUuid": "7ca2e9e5-a688-4491-95d9-a0f1c10e8eb9",
           "type": "number",
           "value": 0
         },
         {
           "name": "Landed",
+          "persistentUuid": "b7c7d843-91b5-4189-b769-0f200a31fe66",
           "type": "number",
           "value": 0
         },
         {
           "name": "SpawnNeeded",
+          "persistentUuid": "7981cb93-a5bc-425d-8814-58bd072662d0",
           "type": "number",
           "value": 0
         },
         {
           "name": "RowY",
+          "persistentUuid": "304e8562-c0a9-427c-a65d-08e9e1c27731",
           "type": "number",
           "value": 0
         },
         {
           "name": "Cleared",
+          "persistentUuid": "27a510c4-e02a-4845-9653-6850694db51c",
           "type": "number",
           "value": 0
         },
         {
           "name": "LinesNow",
+          "persistentUuid": "852c58b5-2796-4ae4-848d-6f2235cce601",
           "type": "number",
           "value": 0
         },
         {
           "name": "Score",
+          "persistentUuid": "c5746fc2-1a0e-40ed-b34d-a95c61d60e12",
           "type": "number",
           "value": 0
         },
         {
           "name": "Lines",
+          "persistentUuid": "bc98460c-c173-4e67-913d-ea6da87c7ead",
           "type": "number",
           "value": 0
         },
         {
           "name": "Level",
+          "persistentUuid": "c65d0a10-b154-4987-9e92-39bd253c4d58",
           "type": "number",
           "value": 1
         },
         {
           "name": "FallDelay",
+          "persistentUuid": "7a008c58-c06f-47fc-8453-26362d630651",
           "type": "number",
           "value": 0.8
         },
         {
           "name": "ShiftWait",
+          "persistentUuid": "1519f832-8b4e-4ea6-91c5-802c4110ce26",
           "type": "number",
           "value": 0.17
         },
         {
           "name": "I",
+          "persistentUuid": "0f42492b-64d4-4d4a-a2f5-34ce005ad330",
           "type": "number",
           "value": 0
         },
         {
           "name": "State",
+          "persistentUuid": "383f2c4e-cd6b-47af-90a4-e54746616dbc",
           "type": "string",
           "value": "Playing"
         }
