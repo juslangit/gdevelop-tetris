@@ -3,3 +3,6 @@
 # HTML5 export - regenerate with GDevelop (File > Export) or the CLI below
 build/
 game.raw.json
+
+# Project record: built locally, never committed (it holds session logs)
+docs/index.html
